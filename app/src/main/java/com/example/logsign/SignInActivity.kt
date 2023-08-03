@@ -27,9 +27,7 @@ class SignInActivity : AppCompatActivity() {
         btn1.setOnClickListener {//로그인
             if (id.text.toString().isNotEmpty() && password.text.toString().isNotEmpty()) {
                 val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("ID", get_id.toString()) // Extra로 아이디 전달
-                intent.putExtra("name", get_name.toString()) // Extra로 Name 전달
-                startActivity(intent)
+
                 Toast.makeText(this, "로그인 되었습니다", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "아이디 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
