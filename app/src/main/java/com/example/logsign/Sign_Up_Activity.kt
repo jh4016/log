@@ -23,6 +23,7 @@ class Sign_Up_Activity : AppCompatActivity() {
                 val intent = Intent(this, SignInActivity::class.java)
                 intent.putExtra("ID", ID.text.toString()) // Extra로 아이디 전달
                 intent.putExtra("name", Name.text.toString()) // Extra로 Name 전달
+                intent.putExtra("password", Password.text.toString()) // Extra로 Name 전달
                 startActivity(intent)
                 finish() // SignUpActivity 종료
             } else {

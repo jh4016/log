@@ -20,7 +20,9 @@ class SignInActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.pas_1)
         val get_id=intent.getStringExtra("ID")
         val get_name=intent.getStringExtra("name")
-
+        val get_password =intent.getStringExtra("password")
+        password.setText(get_password)
+        id.setText(get_id)
 
         btn2.setOnClickListener {//회원가입
             val intent = Intent(this, Sign_Up_Activity::class.java)
